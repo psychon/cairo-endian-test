@@ -5,7 +5,7 @@ arch:
 addons:
   apt:
     packages:
-      - build-essentials
+      - build-essential
       - libcairo2-dev
 script:
   - gcc main.c $(pkg-config --cflags --libs cairo)
