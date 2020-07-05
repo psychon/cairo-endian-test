@@ -1,0 +1,12 @@
+os: linux
+arch:
+  - amd64
+  - s390x
+addons:
+  apt:
+    packages:
+      - build-essentials
+      - libcairo2-dev
+script:
+  - gcc main.c $(pkg-config --cflags --libs cairo)
+  - ./a.out
